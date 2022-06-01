@@ -1,0 +1,20 @@
+{
+  "name": "manfred-to-europass",
+  "version": "1.0.0",
+  "description": "Work in progress... tool to convert from MAC Json to Europass",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lemoncode/manfred-to-europass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lemoncode/manfred-to-europass/issues"
+  },
+  "homepage": "https://github.com/Lemoncode/manfred-to-europass#readme"
+}
