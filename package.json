@@ -8,7 +8,9 @@
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "start:dev": "webpack-dev-server --mode development --open",
-    "build": "rimraf dist && webpack --mode development"
+    "build": "rimraf dist && webpack --mode development",
+    "test": "jest -c ./config/test/jest.js --verbose",
+    "test:watch": "npm run test -- --watchAll -i"
   },
   "repository": {
     "type": "git",
