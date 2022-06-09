@@ -1,5 +1,5 @@
-import { DocumentInfo } from "./documentInfo";
-import { PrintingPreferences } from "./printingPreferences";
+import { DocumentInfo } from "./documentInfo.model";
+import { PrintingPreferences } from "./printingPreferences.model";
 import { LearnerInfo } from "./learnerInfo";
 
 // Root
