@@ -1,5 +1,5 @@
 // TODO add Aliases
-import * as model from "../models/europass";
+import * as model from "models/europass";
 
 export const generateSkillsPassport = (
   skillsPassport: model.SkillsPassport
