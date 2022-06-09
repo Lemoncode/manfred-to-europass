@@ -3,7 +3,7 @@ import { PrintingPreferences } from "./printingPreferences";
 import { LearnerInfo } from "./learnerInfo";
 
 // Root
-interface SkillsPassport {
+export interface SkillsPassport {
   documentInfo: DocumentInfo;
   printingPreferences: PrintingPreferences;
   learnerInfo: LearnerInfo;
