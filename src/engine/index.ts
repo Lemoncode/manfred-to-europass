@@ -12,7 +12,7 @@ const generateXMLRoot = (): RootInfo => {
 
   return {
     document: xmlDocument,
-    root: xmlDocument.getRootNode(), //xmlDocument.createElement(rootNodeNames.SkillsPassport),
+    root: xmlDocument.getRootNode(), 
   };
 };
 
