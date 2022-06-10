@@ -9,5 +9,9 @@ export const generateDocumentInfoElement = (
     rootNodeNames.DocumentInfo
   );
 
+  // TODO: Go Felix Go
+  // const documentTypeElement = generateDocumentType(document);
+  // rootNodeNames.DocumentInfo.appendChild(documentTypeElement);
+
   return documentInfoElement;
 };

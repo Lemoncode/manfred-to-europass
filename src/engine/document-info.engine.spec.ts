@@ -27,4 +27,6 @@ describe("document.info.engine", () => {
     // Assert
     expect(documentInfoElement.nodeName).toBe(rootNodeNames.DocumentInfo);
   });
+
+  // Cases to test DocumentType
 });
