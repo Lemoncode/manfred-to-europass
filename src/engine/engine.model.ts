@@ -1,4 +1,5 @@
+import { XMLBuilder } from "xmlbuilder2/lib/interfaces";
+
 export interface RootInfo {
-  document: Document;
-  root: Node;
+  root: XMLBuilder;
 }
