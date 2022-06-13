@@ -4,6 +4,7 @@ import { generateDocumentInfoElement } from "./document-info.engine";
 import { RootInfo } from "./engine.model";
 import { rootNodeNames } from "./nodes.const";
 import { create } from "xmlbuilder2";
+import { generateLearnerInfoElement } from "./learner-info.engine";
 
 const generateXMLRoot = (): RootInfo => {
   const root = create({});
@@ -29,6 +30,9 @@ export const generateSkillsPassport = (
   if (skillsPassport.documentInfo) {
     generateDocumentInfoElement(rootInfo);
   }
+
+  // Harcoded right now
+  generateLearnerInfoElement(rootInfo);
 
   /*
   // TODO Add XMLWriter like parameter
