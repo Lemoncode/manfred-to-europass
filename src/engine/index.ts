@@ -12,7 +12,7 @@ const generateXMLRoot = (): RootInfo => {
 
   return {
     document: xmlDocument,
-    root: xmlDocument.getRootNode(), 
+    root: xmlDocument.getRootNode(),
   };
 };
 
@@ -22,7 +22,6 @@ export const generateSkillsPassport = (
   let output: string = "";
 
   const rootInfo = generateXMLRoot();
-
   if (skillsPassport.documentInfo) {
     const documentInfoElement = generateDocumentInfoElement(rootInfo);
     rootInfo.root.appendChild(documentInfoElement);
