@@ -27,7 +27,7 @@ export const generateSkillsPassport = (
   const rootInfo = generateXMLRoot();
 
   if (skillsPassport.documentInfo) {
-    generateDocumentInfoElement(rootInfo);
+    generateDocumentInfoElement(rootInfo, skillsPassport.documentInfo);
   }
   if (skillsPassport.printingPreferences) {
     generatePrintingPreferences(rootInfo);
