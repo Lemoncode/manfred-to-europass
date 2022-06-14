@@ -1,10 +1,12 @@
 // TODO add Aliases
+import { create } from "xmlbuilder2";
+
 import * as model from "models/europass";
-import { generateDocumentInfoElement } from "./document-info.engine";
 import { RootInfo } from "./engine.model";
 import { rootNodeNames } from "./nodes.const";
-import { create } from "xmlbuilder2";
+import { generateDocumentInfoElement } from "./document-info.engine";
 import { generateLearnerInfoElement } from "./learner-info.engine";
+import { generatePrintingPreferences } from "./printing-preferences.engine";
 
 const generateXMLRoot = (): RootInfo => {
   const root = create({});
@@ -30,9 +32,12 @@ export const generateSkillsPassport = (
   if (skillsPassport.documentInfo) {
     generateDocumentInfoElement(rootInfo);
   }
-
-  // Harcoded right now
-  generateLearnerInfoElement(rootInfo);
+  if (skillsPassport.printingPreferences) {
+    generatePrintingPreferences(rootInfo);
+  }
+  if (skillsPassport.learnerInfo) {
+    generateLearnerInfoElement(rootInfo);
+  }
 
   /*
   // TODO Add XMLWriter like parameter
