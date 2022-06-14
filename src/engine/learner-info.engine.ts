@@ -10,7 +10,7 @@ export const generateLearnerInfoElement = (rootInfo: RootInfo) => {
   const identificationNode = learnerInfoNode.ele("Identification");
   const personName = identificationNode.ele("PersonName");
   personName.ele("FirstName").txt("John");
-  personName.ele("SurName").txt("Smith");
+  personName.ele("Surname").txt("Smith");
 
   // WorkExperienceList
   learnerInfoNode.ele("WorkExperienceList");

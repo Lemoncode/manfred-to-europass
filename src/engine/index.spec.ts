@@ -107,7 +107,7 @@ describe("Index Element Root", () => {
     const result = generateSkillsPassport(SkillsWithEmptyDocInfo);
     // Assert
     expect(result).toBe(
-      '<?xml version="1.0"?><SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/EuropassSchema_V3.0.xsd" locale="en"><LearnerInfo><Identification><PersonName><FirstName>John</FirstName><SurName>Smith</SurName></PersonName></Identification><WorkExperienceList/><Skills/></LearnerInfo></SkillsPassport>'
+      '<?xml version="1.0"?><SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/EuropassSchema_V3.0.xsd" locale="en"><LearnerInfo><Identification><PersonName><FirstName>John</FirstName><Surname>Smith</Surname></PersonName></Identification><WorkExperienceList/><Skills/></LearnerInfo></SkillsPassport>'
     );
   });
 });
