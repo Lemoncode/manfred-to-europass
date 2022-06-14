@@ -1,14 +1,13 @@
-// TODO add Aliases
 import { create } from "xmlbuilder2";
 
 import * as model from "models/europass";
-import { RootInfo } from "./engine.model";
 import { rootNodeNames } from "./nodes.const";
 import { generateDocumentInfoElement } from "./document-info.engine";
 import { generateLearnerInfoElement } from "./learner-info.engine";
 import { generatePrintingPreferences } from "./printing-preferences.engine";
+import { XMLBuilder } from "xmlbuilder2/lib/interfaces";
 
-const generateXMLRoot = (): RootInfo => {
+const generateXMLRoot = (): XMLBuilder => {
   const root = create({});
 
   const skillsNode = root.ele(rootNodeNames.SkillsPassport, {
@@ -19,9 +18,7 @@ const generateXMLRoot = (): RootInfo => {
     locale: "en",
   });
 
-  return {
-    root: skillsNode,
-  };
+  return skillsNode;
 };
 
 export const generateSkillsPassport = (
@@ -46,7 +43,7 @@ export const generateSkillsPassport = (
   generateLearnerInfo();
   */
 
-  const pretty = rootInfo.root.end({ prettyPrint: true });
+  //const pretty = rootInfo.root.end({ prettyPrint: true });
 
-  return rootInfo.root.end();
+  return rootInfo.end();
 };

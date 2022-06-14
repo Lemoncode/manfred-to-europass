@@ -1,10 +1,10 @@
 import * as model from "models/europass";
-import { RootInfo } from "./engine.model";
+import { XMLBuilder } from "xmlbuilder2/lib/interfaces";
 import { rootNodeNames } from "./nodes.const";
 
-export const generatePrintingPreferences = (rootInfo: RootInfo) => {
+export const generatePrintingPreferences = (rootInfo: XMLBuilder) => {
   // LearnerInfo
-  const printingPreferencesNode = rootInfo.root.ele(
+  const printingPreferencesNode = rootInfo.ele(
     rootNodeNames.PrintingPreferences
   );
 };

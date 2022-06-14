@@ -1,7 +1,7 @@
 import React from "react";
-
 import { generateSkillsPassport } from "./engine/index";
 import * as model from "models/europass";
+
 export const App = () => {
   const hardcoreDocInfo: model.DocumentInfo = {
     documentType: "ECV",

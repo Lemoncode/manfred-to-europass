@@ -1,9 +1,9 @@
 import * as model from "models/europass";
-import { RootInfo } from "./engine.model";
+import { XMLBuilder } from "xmlbuilder2/lib/interfaces";
 import { rootNodeNames } from "./nodes.const";
 
-export const generateDocumentInfoElement = (rootInfo: RootInfo) => {
-  const documentInfoNode = rootInfo.root.ele(rootNodeNames.DocumentInfo);
+export const generateDocumentInfoElement = (rootInfo: XMLBuilder) => {
+  const documentInfoNode = rootInfo.ele(rootNodeNames.DocumentInfo);
 
   documentInfoNode.ele("DocumentType").txt("ECV");
   // TODO How to serialize date to UTC --> DateFns

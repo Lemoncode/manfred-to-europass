@@ -1,10 +1,10 @@
 import * as model from "models/europass";
-import { RootInfo } from "./engine.model";
+import { XMLBuilder } from "xmlbuilder2/lib/interfaces";
 import { rootNodeNames } from "./nodes.const";
 
-export const generateLearnerInfoElement = (rootInfo: RootInfo) => {
+export const generateLearnerInfoElement = (rootInfo: XMLBuilder) => {
   // LearnerInfo
-  const learnerInfoNode = rootInfo.root.ele(rootNodeNames.LearnerInfo);
+  const learnerInfoNode = rootInfo.ele(rootNodeNames.LearnerInfo);
 
   // Identification
   const identificationNode = learnerInfoNode.ele("Identification");
