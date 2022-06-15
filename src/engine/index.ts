@@ -30,10 +30,10 @@ export const generateSkillsPassport = (
     generateDocumentInfoElement(rootInfo, skillsPassport.documentInfo);
   }
   if (skillsPassport.printingPreferences) {
-    generatePrintingPreferences(rootInfo);
+    generatePrintingPreferences(rootInfo, skillsPassport.printingPreferences);
   }
   if (skillsPassport.learnerInfo) {
-    generateLearnerInfoElement(rootInfo);
+    generateLearnerInfoElement(rootInfo, skillsPassport.learnerInfo);
   }
 
   /*
