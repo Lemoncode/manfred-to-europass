@@ -2,10 +2,10 @@ import { create } from "xmlbuilder2";
 import * as model from "models/europass";
 import { rootNodeNames } from "./nodes.const";
 import { generateDocumentInfoElement } from "./document-info.engine";
-import { parseISO8601Date, trimSpacesAndRemoveMultiline } from "@/testing";
+import { trimSpacesAndRemoveMultiline } from "@/testing";
 
 describe("Document Info", () => {
-  it.only("Should generate a DocumentInfo when all fields are informed", () => {
+  it("Should generate a DocumentInfo when all fields are informed", () => {
     // Arrange
     const creationDate = new Date("2013-07-01T07:18:01.579Z");
     const updateDate = new Date("2013-07-01T07:18:01.579Z");
