@@ -3,7 +3,7 @@ export interface Skills {
 }
 
 interface Linguistic {
-  motherTonguiList: MotherTongue[];
+  motherTongList: MotherTongue[];
 }
 
 interface MotherTongue {
