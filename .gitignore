@@ -49,7 +49,6 @@ junit.xml
 *.orig
 /typings
 report.**.json
-/common/schema
 
 # System Files
 .DS_Store
