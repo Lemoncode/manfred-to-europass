@@ -11,3 +11,5 @@ export interface SkillsPassport {
 }
 
 export * from "./documentInfo.model";
+export * from "./printingPreferences.model";
+export * from "./learnerInfo";

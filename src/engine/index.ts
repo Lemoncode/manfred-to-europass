@@ -1,36 +1,40 @@
-// TODO add Aliases
+import { create } from "xmlbuilder2";
+
 import * as model from "models/europass";
-import { generateDocumentInfoElement } from "./document-info.engine";
-import { RootInfo } from "./engine.model";
 import { rootNodeNames } from "./nodes.const";
+import { generateDocumentInfoElement } from "./document-info.engine";
+import { generateLearnerInfoElement } from "./learner-info.engine";
+import { generatePrintingPreferences } from "./printing-preferences.engine";
+import { XMLBuilder } from "xmlbuilder2/lib/interfaces";
 
-const generateXMLRoot = (): RootInfo => {
-  const seedXml = `<${rootNodeNames.SkillsPassport} xmlns="http://europass.cedefop.europa.eu/Europass" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/EuropassSchema_V3.0.xsd" locale="en"></${rootNodeNames.SkillsPassport}>`;
+const generateXMLRoot = (): XMLBuilder => {
+  const root = create({});
 
-  var parser = new DOMParser();
-  const xmlDocument = parser.parseFromString(seedXml, "application/xml");
+  const skillsNode = root.ele(rootNodeNames.SkillsPassport, {
+    xmlns: "http://europass.cedefop.europa.eu/Europass",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "xsi:schemaLocation":
+      "http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/EuropassSchema_V3.0.xsd",
+    locale: "en",
+  });
 
-  return {
-    document: xmlDocument,
-    root: xmlDocument.getRootNode(), 
-  };
+  return skillsNode;
 };
 
 export const generateSkillsPassport = (
   skillsPassport: model.SkillsPassport
 ): string => {
-  let output: string = "";
-
   const rootInfo = generateXMLRoot();
 
   if (skillsPassport.documentInfo) {
-    const documentInfoElement = generateDocumentInfoElement(rootInfo);
-    rootInfo.root.appendChild(documentInfoElement);
+    generateDocumentInfoElement(rootInfo, skillsPassport.documentInfo);
   }
-
-  //generateDocumentInfo();
-
-  output = new XMLSerializer().serializeToString(rootInfo.document);
+  if (skillsPassport.printingPreferences) {
+    generatePrintingPreferences(rootInfo, skillsPassport.printingPreferences);
+  }
+  if (skillsPassport.learnerInfo) {
+    generateLearnerInfoElement(rootInfo, skillsPassport.learnerInfo);
+  }
 
   /*
   // TODO Add XMLWriter like parameter
@@ -39,5 +43,7 @@ export const generateSkillsPassport = (
   generateLearnerInfo();
   */
 
-  return output;
+  //const pretty = rootInfo.root.end({ prettyPrint: true });
+
+  return rootInfo.end();
 };

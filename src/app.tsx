@@ -1,5 +1,5 @@
 import React from "react";
-
+import { RouterComponent } from "@/core/routes/router.component";
 export const App = () => {
-  return <h1>Hello world from React!!!!</h1>;
+  return <RouterComponent />;
 };
