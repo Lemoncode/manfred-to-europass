@@ -4,7 +4,7 @@ import {
     SkillsPassport,
 } from "@/models/europass";
 import { LearnerInfo } from "@/models/europass/learnerInfo";
-import { Identification } from "@/models/europass/learnerInfo/identification.model";
+import { Identification, PersonName } from "@/models/europass/learnerInfo/identification.model";
 import { ManfredAwesomicCV } from "@/models/manfred";
 
 const mapManfredToEuropass = (cv: ManfredAwesomicCV): SkillsPassport => ({
@@ -52,7 +52,7 @@ const generateIdentification = (cv: ManfredAwesomicCV): Identification => ({
     },
 });
 
-const generatePersonName = (profile): Identification["personName"] => ({
+const generatePersonName = (profile): PersonName => ({
     firstName: profile.name,
     surName: profile.surnames,
 });
