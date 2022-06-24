@@ -1,4 +1,4 @@
-import { css } from "@emotion/css";
+import { css } from '@emotion/css';
 export const main = css`
   display: flex;
   flex-direction: column;
@@ -7,7 +7,6 @@ export const main = css`
   padding: 0px;
   gap: 50px;
   isolation: isolate;
-
   background: #ffffff;
 `;
 
@@ -17,14 +16,11 @@ export const containerTitle1 = css`
   justify-content: center;
   align-items: flex-end;
   padding: 100px 10px 0px;
-
   width: 320px;
 `;
 export const title = (width) => css`
   width: ${width}px;
   height: 23px;
-
-  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 19px;
@@ -38,7 +34,6 @@ export const containerLogoManfred = css`
   justify-content: center;
   align-items: center;
   padding: 0px;
-
   width: 320px;
   height: 32px;
 `;
@@ -50,7 +45,6 @@ export const containerTitle2 = css`
   align-items: center;
   padding: 10px;
   gap: 10px;
-
   width: 320px;
   height: 43px;
 `;
@@ -62,7 +56,6 @@ export const buttonContainer = css`
   align-items: center;
   padding: 10px;
   gap: 10px;
-
   width: 320px;
   height: 60px;
 `;
@@ -70,7 +63,6 @@ export const buttonContainer = css`
 export const beginButton = css`
   width: 166px;
   height: 40px;
-  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
