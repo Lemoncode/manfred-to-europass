@@ -4,7 +4,7 @@ export interface Identification {
   demographics: Demographics;
 }
 
-interface PersonName {
+export interface PersonName {
   firstName: string;
   surName: string;
 }
