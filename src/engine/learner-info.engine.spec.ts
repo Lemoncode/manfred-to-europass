@@ -25,12 +25,12 @@ describe("Learner Info", () => {
      <?xml version="1.0"?>
       <SkillsPassport>
         <LearnerInfo>
-            <identification>
+            <Identification>
                 <PersonName>
                     <FirstName>John</FirstName>
                     <Surname>Smith</Surname>
                 </PersonName>
-            </identification>
+            </Identification>
             <WorkExperienceList/>
             <Skills/>
             </LearnerInfo>

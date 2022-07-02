@@ -7,3 +7,5 @@ export interface LearnerInfo {
   workExperienceList: WorkExperience[];
   skills: Skills[];
 }
+
+export * from "./identification.model";
