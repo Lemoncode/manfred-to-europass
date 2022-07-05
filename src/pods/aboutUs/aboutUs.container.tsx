@@ -1,5 +1,6 @@
-import React from "react";
+import React from 'react';
+import { AboutUs } from './aboutUs.component';
 
-export const AboutUsContainer = () => {
-  return <h1>Hello from About Us Scene!!!!</h1>;
+export const AboutUsContainer: React.FunctionComponent = () => {
+  return <AboutUs />;
 };
