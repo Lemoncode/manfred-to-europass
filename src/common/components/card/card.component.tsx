@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card as CardUI } from '@material-ui/core';
+import { Card as CardMUI } from '@material-ui/core';
 
 import * as classes from './card.component.styles';
 
@@ -13,12 +13,12 @@ export interface Props {
 export const Card: React.FunctionComponent<Props> = (props) => {
   const { title, primaryLogo, primaryLogoAltText, children } = props;
   return (
-    <CardUI className={classes.main}>
+    <CardMUI className={classes.main}>
       <h1 className={classes.title}>{title}</h1>
 
       <img src={primaryLogo} alt={primaryLogoAltText} />
 
       {children}
-    </CardUI>
+    </CardMUI>
   );
 };

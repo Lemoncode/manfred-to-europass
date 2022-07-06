@@ -14,11 +14,8 @@ export const main = css`
 
 export const title = css`
   width: 139px;
-  height: 23px;
   font-style: normal;
   font-weight: 400;
   font-size: 19px;
   line-height: 23px;
-  padding: 0;
-  margin: 0;
 `;
