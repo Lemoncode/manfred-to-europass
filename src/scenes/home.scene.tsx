@@ -1,5 +1,5 @@
-import { HomeContainer } from "@/pods/home/home.container";
-import React from "react";
+import { HomeContainer } from '@/pods/home/home.container';
+import React from 'react';
 
 export const HomeScene = () => {
   return <HomeContainer />;
