@@ -1,5 +1,6 @@
 import * as model from "models/europass";
 import { XMLBuilder } from "xmlbuilder2/lib/interfaces";
+import { generateIdentificationElement } from "./learner-info";
 import { rootNodeNames } from "./nodes.const";
 
 export const generateLearnerInfoElement = (
@@ -10,12 +11,7 @@ export const generateLearnerInfoElement = (
   const learnerInfoNode = rootInfo.ele(rootNodeNames.LearnerInfo);
 
   // Identification
-  const identificationNode = learnerInfoNode.ele("identification");
-  const personName = identificationNode.ele("PersonName");
-  personName
-    .ele("FirstName")
-    .txt(learnerInfo.identification.personName.firstName);
-  personName.ele("Surname").txt(learnerInfo.identification.personName.surName);
+  generateIdentificationElement(learnerInfoNode, learnerInfo.identification);
 
   // WorkExperienceList
   learnerInfoNode.ele("WorkExperienceList");
