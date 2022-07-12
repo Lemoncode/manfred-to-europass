@@ -1,2 +1,2 @@
-export * from './theme-provider.component';
-export * from './themeStyles';
+export * from './theme-provider.component'
+export * from './theme.hooks'
