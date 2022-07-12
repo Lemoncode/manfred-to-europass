@@ -1,11 +1,11 @@
-import React from 'react';
-import { RouterComponent } from '@/core/routes/router.component';
-import { ThemeProviderComponent } from 'core/theme';
+import React from 'react'
+import { RouterComponent } from '@/core/routes/router.component'
+import { ThemeProvider } from 'core/theme'
 
 export const App = () => {
   return (
-    <ThemeProviderComponent>
+    <ThemeProvider>
       <RouterComponent />
-    </ThemeProviderComponent>
-  );
-};
+    </ThemeProvider>
+  )
+}

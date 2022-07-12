@@ -1,17 +1,17 @@
-import React from 'react';
-import { Card as CardMUI } from '@material-ui/core';
+import React from 'react'
+import { Card as CardMUI } from '@mui/material'
 
-import * as classes from './card.component.styles';
+import * as classes from './card.component.styles'
 
 export interface Props {
-  title: string;
-  primaryLogo: string;
-  primaryLogoAltText: string;
-  children?: React.ReactNode;
+  title: string
+  primaryLogo: string
+  primaryLogoAltText: string
+  children?: React.ReactNode
 }
 
 export const Card: React.FunctionComponent<Props> = (props) => {
-  const { title, primaryLogo, primaryLogoAltText, children } = props;
+  const { title, primaryLogo, primaryLogoAltText, children } = props
   return (
     <CardMUI className={classes.main}>
       <h1 className={classes.title}>{title}</h1>
@@ -20,5 +20,5 @@ export const Card: React.FunctionComponent<Props> = (props) => {
 
       {children}
     </CardMUI>
-  );
-};
+  )
+}

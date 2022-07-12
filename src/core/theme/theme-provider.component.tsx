@@ -1,18 +1,27 @@
-import * as React from 'react';
-import ThemeProvider from '@material-ui/styles/ThemeProvider';
-import { StylesProvider } from '@material-ui/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { themeStyles } from './themeStyles';
+import React from 'react'
+import { CacheProvider } from '@emotion/react'
+import { cache } from '@emotion/css'
+import {
+  ThemeProvider as MuiThemeProvider,
+  CssBaseline,
+  StyledEngineProvider,
+} from '@mui/material'
+import { theme } from './theme'
 
-export const ThemeProviderComponent = (props) => {
-  const { children } = props;
+interface Props {
+  children: React.ReactNode
+}
 
+export const ThemeProvider: React.FC<Props> = (props) => {
+  const { children } = props
   return (
-    <StylesProvider injectFirst>
-      <ThemeProvider theme={themeStyles}>
-        <CssBaseline />
-        {children}
-      </ThemeProvider>
-    </StylesProvider>
-  );
-};
+    <StyledEngineProvider injectFirst={true}>
+      <CacheProvider value={cache}>
+        <MuiThemeProvider theme={theme}>
+          <CssBaseline />
+          {children}
+        </MuiThemeProvider>
+      </CacheProvider>
+    </StyledEngineProvider>
+  )
+}
