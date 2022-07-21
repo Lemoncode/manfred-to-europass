@@ -4,8 +4,8 @@ import { cache } from '@emotion/css'
 import {
   ThemeProvider as MuiThemeProvider,
   CssBaseline,
-  StyledEngineProvider,
-} from '@mui/material'
+  StylesProvider,
+} from '@material-ui/core'
 import { theme } from './theme'
 
 interface Props {
@@ -15,13 +15,13 @@ interface Props {
 export const ThemeProvider: React.FC<Props> = (props) => {
   const { children } = props
   return (
-    <StyledEngineProvider injectFirst={true}>
+    <StylesProvider injectFirst={true}>
       <CacheProvider value={cache}>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
           {children}
         </MuiThemeProvider>
       </CacheProvider>
-    </StyledEngineProvider>
+    </StylesProvider>
   )
 }

@@ -4,7 +4,10 @@ export const main = css`
   display: flex;
   position: absolute;
   top: 15vh;
+  min-width:25vw;
+  min-height:52vh;
   flex-direction: column;
+  justify-content:space-around;
   align-items: center;
   padding: 50px 0;
   gap: 50px;
@@ -13,9 +16,10 @@ export const main = css`
 `;
 
 export const title = css`
-  width: 139px;
+  width: 196px;
   font-style: normal;
   font-weight: 400;
   font-size: 19px;
   line-height: 23px;
+  text-align:center;
 `;
