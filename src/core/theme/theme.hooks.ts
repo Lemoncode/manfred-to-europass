@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTheme } from '@material-ui/core'
+import { useTheme } from '@mui/material'
 
 export type ResultType<Classes> = {
   [K in keyof Classes]?: Classes[K] extends string | Function

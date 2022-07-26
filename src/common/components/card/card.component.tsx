@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card as CardMUI } from '@material-ui/core'
+import { Card as CardMUI } from '@mui/material'
 import * as classes from './card.component.styles'
 
 export interface Props {
